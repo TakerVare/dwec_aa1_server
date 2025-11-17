@@ -1,15 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>AA1 Gestor de contraseñas</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/main.js"></script>
 </head>
+
 <body>
-  <main>
-    <ul></ul>
+  <header class="header">
+    <div class="tittle">
+      <p>Pass saver</p>
+    </div>
+    <div class="nav-buttons-container">
+      <span class="minimizar"></span>
+      <span class="maximizar"></span>
+      <span class="cerrar"></span>
+    </div>
+  </header>
+
+  <div class="switch-container">
+      <button class="cta-add-categories">Add category</button>
+      <button class="cta-add-sites">Add site</button>
+    </div>
+
+  <main class="main-container">
+    
+
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span>Categories</span>
+      </div>
+      <div class="sidebar-body">
+        <ul class="categories-list" id="categories-list-body">
+          <!-- Aquí va el contenido de la lista de categorías-->
+           
+        </ul>
+      </div>
+    </div>
+    <div class="sites-table-container">
+      <table class="sites-table" id="main-sites-table">
+        <tr>
+          <th>Site</th>
+          <th>Username</th>
+          <th>Created at</th>
+          <th>Actions</th>
+        </tr>
+        <!-- Aquí va el contenido de la lista de sitios en función de la categoría seleccionada -->
+        <!-- INICIO Datos de ejemplo --> 
+        <tr>
+          <td>example.com</td>
+          <td>user123</td>
+          <td>2024-01-01</td>
+          <td>
+            <button class="edit-site">Edit</button>
+            <button class="delete-site">Delete</button>
+          </td>
+         </tr>
+         <tr>
+          <td>example.com</td>
+          <td>user123</td>
+          <td>2024-01-01</td>
+          <td>
+            <button class="edit-site">Edit</button>
+            <button class="delete-site">Delete</button>
+          </td>
+         </tr>
+         <!-- FIN Datos de ejemplo -->
+      </table>
+    </div>
+
+
   </main>
+
+
+
+<!--
   <script>
     let drawData = (data) => {
       data.forEach(category => {
@@ -25,5 +94,8 @@
       .then(res => res.json())
       .then(data => drawData(data))
   </script>
+
+  -->
 </body>
+
 </html>
